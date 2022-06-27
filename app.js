@@ -15,6 +15,24 @@ for(let i = 0; i < img.length; i++) {
     // 이미지 탐색 후 URL값 가져오기
     let imgUrl = img[i].children[0].getAttribute('src');
     console.log(imgUrl);
+
+    // 라이트 박스 표시
+    const lightbox = document.getElementById('lightbox');
+    // lightbox.setAttribute('class', 'on');
+    lightbox.classList.add('on');
+    // 클릭한 이미지 표시
+    const lightboxImg = document.querySelector('#lightbox .box img');
+    lightboxImg.setAttribute('src', imgUrl);
   });
   // console.log(img[i].children[0]);
 }
+
+
+/* 팝업창 닫기
+  닫기 버튼 누르면 닫힘
+*/
+const closeBtn = document.getElementById('closeBtn');
+closeBtn.addEventListener('click', function(){
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.remove('on');
+});
