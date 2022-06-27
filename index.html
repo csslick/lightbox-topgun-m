@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Light Box UI</title>
   <link rel="stylesheet" href="style.css">
-  <script src="app.js"></script>
 </head>
 <body>
   <h2>Light Box Gallery</h2>
@@ -23,8 +22,12 @@
 
   <!-- 팝업-클릭하면 보임 -->
   <div id="lightbox">
-    <img src="images/01.jpg" alt="light box image">
-    <button id="closeBtn">X</button>
+    <div class="box">
+      <img src="images/01.jpg" alt="light box image">
+      <button id="closeBtn">X</button>
+    </div>
   </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
